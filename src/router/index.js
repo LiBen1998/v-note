@@ -89,7 +89,18 @@ export const constantRoutes = [
       }
     ]
   },
-
+  {
+    path: '/v-note',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'v-note',
+        component: () => import('@/views/v-note/index'),
+        meta: { title: 'v-note', icon: 'form' }
+      }
+    ]
+  },
   {
     path: '/nested',
     component: Layout,
